@@ -1,2 +1,2 @@
-#!/bin/bash #include <stdio.h>
-export CFILE=0-main.c
+#!/bin/bash
+gcc -E $CFILE -o c
