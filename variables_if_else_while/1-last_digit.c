@@ -12,10 +12,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	printf("Last Digit of %d is\n", n);
 	if (n > 5)
-		printf("greater than 5\n", n);
+		printf("%dgreater than 5\n", n);
 	if (n == 0)
-		printf("0\n", n);
+		printf("%d0\n", n);
 	if ((n < 6) && (n != 0))
-		printf("less than 6 and not 0\n", n);
+		printf("%dless than 6 and not 0\n", n);
 	return (0);
 }
