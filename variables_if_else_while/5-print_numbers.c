@@ -12,7 +12,7 @@ int main(void)
 {
 	int i;
 
-	i = 0
+	i = 0;
 
 	while (i < 10)
 	{
@@ -21,3 +21,4 @@ int main(void)
 	}
 	putchar(10);
 	return (0);
+}
