@@ -14,10 +14,10 @@ int main(void)
 
 	i = 122;
 
-	while (i > 97 && i < 123)
+	while (i > 96)
 	{
 		putchar(i);
-		i++;
+		i--;
 	}
 	putchar(10);
 	return (0);
