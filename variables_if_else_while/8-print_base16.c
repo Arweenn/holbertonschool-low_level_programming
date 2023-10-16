@@ -10,12 +10,11 @@
 
 int main(void)
 {
-	int i;
+	int num;
 
-	while (i = 0 && i <= 15)
+	for (num = 0; num <= 15; num++)
 	{
-		printf("%x", i);
-		i++;
+		printf("%x", num);
 	}
 
 	printf("\n");
