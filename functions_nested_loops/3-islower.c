@@ -4,6 +4,8 @@
 /**
  * main - lowercase checks
  *
+ * Description: check if there is a lowercase character
+ *
  * Return: 1 if lowercase
  */
 
