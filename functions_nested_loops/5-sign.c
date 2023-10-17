@@ -3,7 +3,7 @@
 
 /**
  * _isalpha - print sign
- *@c: c is an ascii character
+ *@n: n is an integer
  *
  * Return: 1 (if positive), 0 (if zero), -1 (if negative)
  */
@@ -20,9 +20,9 @@ int print_sign(int n)
 		_putchar('-');
 		return (-1);
 	}
-	 else
-	 {
-		 _putchar('0');
-		 return (0);
-	 }
+	else
+	{
+		_putchar('0');
+		return (0);
+	}
 }
