@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * _isalpha - print sign
- *@n: n is an integer
+ * print_sign - print sign
+ * @n: n is an integer
  *
  * Return: 1 (if positive), 0 (if zero), -1 (if negative)
  */
