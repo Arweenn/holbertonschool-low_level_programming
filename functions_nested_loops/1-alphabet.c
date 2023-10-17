@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - print _putchar
+ * main - print alphabet
  *
- * Description : print _putchar
+ * Description : print alphabet in lowercase
  *
  * Return: Always  0 (Success)
  */
