@@ -10,13 +10,16 @@
 
 int main(void)
 {
-	int num;
+	int i;
 
-	for (num = 0; num <= 15; num++)
+	while (i < 48)
 	{
-		printf("%x", num);
+		if (i < 10)
+			putchar(i + '0');
+		else if (i > 41)
+			putchar(i - 10 + 'A');
+		i++;
 	}
-
-	printf("\n");
+	putchar(10);
 	return (0);
 }
