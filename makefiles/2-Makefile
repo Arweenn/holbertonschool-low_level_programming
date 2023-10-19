@@ -3,15 +3,15 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 
-TARGET = school
+NAME = school
 
-all: $(TARGET)
+all: $(NAME)
 
-$(TARGET): $(OBJ)
+$(NAME): $(OBJ)
     $(CC) -o $@ $^
 
 %.o: %.c
 	$(CC) -c -o $@ $<
 
 clean:
-	rm -f $(TARGET) $(OBJ)
+	rm -f $(NAME) $(OBJ)
