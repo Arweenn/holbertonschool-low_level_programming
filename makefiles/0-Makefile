@@ -1,0 +1,18 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
+
+SOURCE_FILES = main.c school.c 
+OBJECT_FILES = $(SOURCE_FILES:.c=.o)
+
+TARGET = school
+
+all: $(TARGET)
+
+$(TARGET): $(OBJECT_FILES)
+	$(CC) $(CFLAGS) -o $@ $^
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f $(TARGET) $(OBJECT_FILES)
