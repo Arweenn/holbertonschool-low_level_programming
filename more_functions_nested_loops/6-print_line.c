@@ -2,6 +2,7 @@
 
 /**
  * print_line - draw a straight line
+ * @n: integer
  *
  * Description: function that draws a straight line
  *
