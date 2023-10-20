@@ -8,7 +8,7 @@ NAME = school
 RM = rm -f
 
 all: $(OBJ)
-	cc $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean: $(OBJ)
 	$(RM) *~ *.swp $(NAME)
