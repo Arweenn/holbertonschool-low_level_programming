@@ -5,7 +5,5 @@ OBJ = $(SRC:.c=.o)
 
 NAME = school
 
-all:
-	cc	-c -o main.o main.c
-	cc	-c -o school.o school.c
-	cc main.o school.o -o school
+all: $(OBJ)
+	cc $(OBJ) -o $(NAME)
