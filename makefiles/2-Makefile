@@ -5,13 +5,7 @@ OBJ = $(SRC:.c=.o)
 
 NAME = school
 
-all: $(NAME)
+all: $(TARGET)
 
-$(NAME): $(OBJ)
-    $(CC) -o $@ $^
-
-%.o: %.c
-	$(CC) -c -o $@ $<
-
-clean:
-	rm -f $(NAME) $(OBJ)
+$(TARGET): $(OBJ)
+    $(CC) -o $@ $(NAME)
