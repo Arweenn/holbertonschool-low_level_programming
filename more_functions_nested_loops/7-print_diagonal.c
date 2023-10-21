@@ -3,7 +3,7 @@
 /**
  * print_diagonal - draw a diagonal line
  * @n: number of times
- * 
+ *
  * Description: function that draws a diagonal line
  *
  * Return:void
