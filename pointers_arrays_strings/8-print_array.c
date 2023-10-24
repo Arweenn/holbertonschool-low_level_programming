@@ -18,7 +18,7 @@ void print_array(int *a, int n)
 		while (a[i] != '\0' && i < n)
 		{
 			printf("%d", a[i]);
-			if (!(a[i + 1] == '\0' || (i + 1) >= n))
+			if (!(a[i + 1] == '\0' || (i + 1) == n))
 				printf(", ");
 			i++;
 		}
