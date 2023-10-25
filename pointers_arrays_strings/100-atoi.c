@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+	unsigned int count = 0, size = 0, res = 0, sign = 1, m = 1, l;
 
 	while (*(s + count) != '\0')
 	{
@@ -15,7 +15,7 @@ int _atoi(char *s)
 			break;
 
 		if (*(s + count) == '-')
-			pn *= -1;
+			sign *= -1;
 
 		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
 		{
@@ -26,10 +26,10 @@ int _atoi(char *s)
 		count++;
 	}
 
-	for (i = count - size; i < count; i++)
+	for (l = count - size; l < count; l++)
 	{
-		oi = oi + ((*(s + i) - 48) * m);
+		res = res + ((*(s + l) - 48) * m);
 		m /= 10;
 	}
-	return (oi * pn);
+	return (res * sign);
 }
