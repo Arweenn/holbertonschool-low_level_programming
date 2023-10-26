@@ -2,7 +2,8 @@
 
 /**
  * _strcat - appends the src string to the dest string
- * @
+ * @dest: destination
+ * @src: source
  * Return: resulting string dest
  */
 
