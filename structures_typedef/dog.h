@@ -3,7 +3,7 @@
 int _putchar(char c);
 
 /**
- * struct dog
+ * struct dog - structure datatype
  * @name: dog's name
  * @age: dog's age
  * @owner: owner's name
