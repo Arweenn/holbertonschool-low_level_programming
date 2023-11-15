@@ -22,7 +22,7 @@ char *_strdup(char *str)
 		len++;
 	}
 
-	arr = malloc(len * sizeof(char) + 1);
+	arr = (char *) malloc(len * sizeof(char) + 1);
 
 	if (arr == NULL)
 		return (NULL);
@@ -32,9 +32,7 @@ char *_strdup(char *str)
 		arr[i] = str[i];
 	}
 
-
 	arr[i] = '\0';
-
 
 	return (arr);
 }
@@ -46,13 +44,12 @@ char *_strdup(char *str)
  * @owner: dog's owner
  * Return: new_dog (dog_t)
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
 	char *d_name, *d_owner;
 
-	d = malloc(sizeof(dog_t));
+	 d = malloc(sizeof(dog_t));
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
