@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * dlistint_len - function that returns the number of elements in a linked dlistint_t list
+ * dlistint_len - lists the number of elements in a dlistint_t list
  * @h: head of the dlistint_t list
  * Return: number of elements
  */
