@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	while ((nrd = read(fd_s, buf, BUFFER_SIZE)) > 0)
 	{
 		nwr = write(fd_d, buf, nrd);
-		if (nwr != -1)
+		if (nwr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_s);
 			close(fd_s);
