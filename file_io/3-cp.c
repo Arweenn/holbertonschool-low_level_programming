@@ -1,5 +1,5 @@
 #include "main.h"
-#define BUFFER_SIZE 1024
+#include <stdio.h>
 
 /**
  * errors - handle errors
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	const char *f_from = argv[1];
 	const char *f_to = argv[2];
 	int fd_s, fd_d;
-	char buf[BUFFER_SIZE];
+	char buf[1024];
 	ssize_t nrd, nwr;
 
 	if (argc != 3)
@@ -47,10 +47,10 @@ int main(int argc, char *argv[])
 	}
 
 	fd_s = open(f_from, O_RDONLY);
-	fd_d = open(f_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fd_d = open(f_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	errors(fd_s, fd_d, argv);
 
-	while ((nrd = read(fd_s, buf, BUFFER_SIZE)) > 0)
+	while ((nrd = read(fd_s, buf, 1024)) > 0)
 	{
 		nwr = write(fd_d, buf, nrd);
 		if (nwr == -1)
