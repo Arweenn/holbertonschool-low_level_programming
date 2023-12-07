@@ -20,9 +20,12 @@ int append_text_to_file(const char *filename, char *text_content)
 			nletters++;
 	}
 
-	fd = open(filename, O_RDWR | O_APPEND, 0664);
+	fd = open(filename, O_WRONLY | O_APPEND);
 	rwr = write(fd, text_content, nletters);
-	if (fd == -1 || rwr == -1)
+	if (fd == -1)
+		return (-1);
+
+	if (rwr == -1)
 	{
 		close(fd);
 		return (-1);
