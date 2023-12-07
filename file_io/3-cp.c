@@ -55,10 +55,10 @@ int main(int argc, char *argv[])
 		nwr = write(fd_d, buf, nrd);
 		if (nwr == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_s);
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			close(fd_s);
 			close(fd_d);
-			exit(100);
+			exit(99);
 		}
 	}
 	if (nrd == -1)
