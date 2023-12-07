@@ -68,7 +68,9 @@ int main(int argc, char *argv[])
 		close(fd_d);
 		exit(98);
 	}
-	close(fd_s);
-	close(fd_d);
+	if (close(fd_s) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_s), exit(100);
+	if (close(fd_d) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_d), exit(100);
 	return (0);
 }
