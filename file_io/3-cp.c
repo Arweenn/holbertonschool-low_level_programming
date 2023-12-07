@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	fd_d = open(f_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	errors(fd_s, fd_d, argv);
 
-	while ((nrd = read(fd_s, buf, 1024)) > 0)
+	while ((nrd = read(fd_s, buf, sizeof(buf))) > 0)
 	{
 		nwr = write(fd_d, buf, nrd);
 		if (nwr == -1)
