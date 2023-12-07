@@ -61,6 +61,13 @@ int main(int argc, char *argv[])
 			exit(100);
 		}
 	}
+	if (nrd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		close(fd_s);
+		close(fd_d);
+		exit(98);
+	}
 	close(fd_s);
 	close(fd_d);
 	return (0);
